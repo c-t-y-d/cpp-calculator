@@ -2,40 +2,43 @@
 #include "calculator.h"
 using namespace std; 
 
+Calculator obj;
+static int calcNum;
+int num1;
+int num2;
+string operation;
+bool run = 1;
+
 int main(){  
-    Calculator obj;
-    int num1;
-    int num2;
-    string operation;
     string exit;
-    bool run = 1;
     if (run != 0){
         while (run != 0){
-            std::cout << "Enter your first value: ";
-            std::cin >> num1;
-            std::cout << "Enter your second value: ";
-            std::cin >> num2;
-            std::cout << "What kind of operation would you liked performed? a. addition b. subtraction c. multiplication d. division" << std::endl;
-            std::cin >> operation;
+            cout << "Enter your first value: ";
+            cin >> num1;
+            cout << "Enter your second value: ";
+            cin >> num2;
+            cout << "What kind of operation would you liked performed? a. addition b. subtraction c. multiplication d. division" << endl;
+            cin >> operation;
 
             if (operation.compare("a") == 0){
-                obj.add(num1, num2);
+                cout << obj.add(num1, num2) << endl;
             }
 
             else if (operation.compare("b") == 0){
-                obj.sub(num1, num2);
+                cout << obj.sub(num1, num2) << endl;
             }
 
             else if (operation.compare("c") == 0){
-                obj.mult(num1, num2);
+                cout << obj.mult(num1, num2) << endl;
             }
 
             else if (operation.compare("d") == 0){
-                obj.div(num1, num2);
+                cout << obj.div(num1, num2) << endl;
             }
+            calcNum++;
+            cout << "Total calculations this session: " << calcNum << "\nWould you like to calculate anything else (Y/N)?" << endl;
+            cin >> exit;
 
-            std::cout << "Would you like to calculate anything else (Y/N)?" << std::endl;
-            std::cin >> exit;
             if (exit.compare("n") == 0){
                 run = 0;
             }
