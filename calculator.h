@@ -3,31 +3,30 @@ using namespace std;
 
 class Calculator {
 
-    private: 
-    int var1; 
-    int var2;
+    private:
+    int var1;
 
     public: 
     Calculator(){
     }
 
     public: 
-    void add(int var1, int var2){
-        std::cout << (float)var1 + var2 << std::endl;
+    int add(int var1, int var2){
+        return (var1 + var2);
     }
 
     public:
-    void sub(int var1, int var2){
-        std::cout << var1 - var2 << std::endl;
+    int sub(int var1, int var2){
+        return (var1 - var2);
     }
 
     public: 
-    void mult(int var1, int var2){
-        std::cout << var1 * var2 << std::endl;;
+    int mult(int var1, int var2){
+        return (var1 * var2);
     }
 
     public: 
-    void div(int var1, int var2){
-        std::cout << var1 / var2 << std::endl;
+    int div(int var1, int var2){
+        return (var1 / var2);
     }
 };
