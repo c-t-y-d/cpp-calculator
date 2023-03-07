@@ -25,7 +25,6 @@ int main(){
                 case 'a':
                     cout << obj.add(num1, num2) << endl;
                     break;
-
                 case 'b':
                     cout << obj.sub(num1, num2) << endl;
                     break;
@@ -42,6 +41,7 @@ int main(){
                     cout << "Invalid option" << endl;
                     break;
             }
+
             calcNum++;
             cout << "Total calculations this session: " << calcNum << "\nUser Options [O]\n" << "\nWould you like to calculate anything else (Y/N)?" << endl;
             cin >> options;
@@ -54,6 +54,7 @@ int main(){
                 cout << "   s\t Set the calculation count\n";
                 cout << "   l\t Exit the calculator\n";
                 cin >> operation;
+
                 if (options.compare("s") == 0){
                     cout << "What would you like the new count to be? ";
                     int newCount; 
@@ -62,9 +63,11 @@ int main(){
                     calcNum = newCount;
                     cout << "New count: " << obj.getCalcAmount() << endl;
                 }
+
                 if (options.compare("l") == 0){
                     break;
                 }
+
                 cout << "Would you like to calculate anything else (Y/N)?" << endl;
                 cin >> operation;
             }
